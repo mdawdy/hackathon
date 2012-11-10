@@ -1,0 +1,334 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Chameleon Circuit - A full featured unlimited colors admin panel theme</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="Themio">
+	<meta name="copyright" content="Themio">
+	<meta name="generator" content="Documenter v1.4 http://rxa.li/documenter">
+	<meta name="date" content="2011-07-25T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	<script src="js/jquery.1.5.1.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushCss.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#E8F3F8;color:#383838;}
+		::-moz-selection{background:#DBE6EC;color:#111111;}
+		::selection{background:#DBE6EC;color:#111111;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#81A8B8;}
+		hr{border-top:1px solid #D7E1E6;border-bottom:1px solid #EFFAFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#001d31;color:#d2d9dd;}
+		#documenter_sidebar ol{border-top:1px solid #112e40;}
+		#documenter_sidebar ol a{border-top:1px solid #000017;border-bottom:1px solid #112e40;color:#C6C2C2;}
+		#documenter_sidebar ol a.current, #documenter_sidebar ol a:hover {background:#000013;color:#e9ecee;border-top:1px solid #000017;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#introduction">Introduction</a></li>
+			<li><a href="#html_structure">HTML Structure</a></li>
+			<li><a href="#css_structure">CSS Structure</a></li>
+			<li><a href="#third_party">Third Party</a></li>
+			<li><a href="#psd_files">PSD files</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright Themio 2011<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.4</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>Chameleon Circuit</h1><h2>A full featured unlimited colors admin panel theme</h2><hr><ul><li>latest Update: 01 September 2011</li><li>By: Themio</li><li><a href=""></a></li><li>Email: <a href="mailto:&#116;&#104;&#101;&#109;&#105;&#111;&#100;&#111;&#99;&#115;&#64;&#108;&#101;&#101;&#118;&#105;&#111;&#46;&#99;&#111;&#109;">&#116;&#104;&#101;&#109;&#105;&#111;&#100;&#111;&#99;&#115;&#64;&#108;&#101;&#101;&#118;&#105;&#111;&#46;&#99;&#111;&#109;</a></li></ul></section><section id="introduction">
+	<h3>Introduction</h3><hr class="notop">
+<p>
+	Themio is proud to introduce it&#39;s very first full-featured admin panel. The theme changes to almost any color through the clever use of transparent pngs.</p>
+<p class="info">
+	All the colors and fonts are easily changable from the styles/config.css file</p>
+<p>
+	The theme also comes built-in with almost all the plugins you might need for an admin panel theme. Included are over 3,500+ icons from the <a href="http://p.yusukekamiyamane.com/">fugue iconset</a>, and a further 50 hand-edited menu icons.</p>
+</section>
+<section id="html_structure">
+	<h3>HTML Structure</h3><hr class="notop">
+<p>
+	The theme follows <a href="http://960.gs">960 grid system</a> with 16 coloumns, although it can be easily changed to 12 columns by changing all <em>container_16</em> classes on the theme to <em>container_12</em>.</p>
+<p>
+	An important (and only) difference from the 960.gs to this theme is that we require an extra <em>first</em> class to be added to every first container of a row. For example, a container that has 4 grid_8 widgets in 2 rows will have a structure like so:</p>
+<p>
+	<img src="grid.png"></p>
+<p>
+	&nbsp;</p>
+<p>
+	Moving on, widgets are structured as such</p>
+<pre class="brush: html">
+&lt;div class=&quot;grid_8 widget first&quot;&gt;
+    &lt;div class=&quot;widget_title clearfix&quot;&gt;
+        &lt;h2&gt;&lt;!--widget title--&gt;&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;widget_body&quot;&gt;
+        &lt;div class=&quot;widget_options&quot;&gt;
+                &lt;!--widget options paenl --&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;widget_content&quot;&gt;
+             &lt;!-- actual content --&gt;
+        &lt;/div&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>
+	<br>
+	The grid_* class with the widget specifies how big the widget should be.<br>
+	The first class with the widget specifies that this is the first class in the row.</p>
+<p>
+	widget_options is a panel for options that can go with the widget. This part is optional.<br>
+	widget_content gives a 5px padding on all sides of the widget. May not be needed for a full size table. Also optional.</p>
+
+	<h4>Sidebar version</h4>
+	<p>The sidebar version of the theme uses a different header (s_header.php), all other files remain the same. 
+	One important addition is also the use of sidemenu.js which manages the accordion effects.</p>
+	<p>All the links in the #sidemenu>li>a also will need a .clearfix class attached to them.</p>
+	
+</section>
+<section id="css_structure">
+	<h3>CSS Structure</h3><hr class="notop">
+<p>
+	We are using multiple CSS files for this theme, all linked in the style.css file using</p>
+<pre class="brush: css">
+@import(...)
+</pre>
+<p>
+	If you would like to add/remove certain CSS files, you can open up <strong>style.css</strong> and add/remove files from the <strong>Structure</strong> category.</p>
+<p>
+	There is also a IE7.css file included to build support for IE7 using conditional statements.</p>
+<p>
+	If you would just like to change the fonts and colors, those are used separately in <strong>config.css</strong> file.</p>
+	
+</section>
+<section id="third_party">
+	<h3>Third Party</h3><hr class="notop">
+<p>
+	Chameleon Circuit uses the following jQuery plugins. Although we have displayed some demo features in our theme, a lot more can be found in these pages along with their documentation.</p>
+<div>
+	<strong>jQuery</strong><br>
+	<a href="http://jquery.com"> http://jquery.com</a></div>
+<div>
+	<a href="http://jqueryui.com/latest/MIT-LICENSE.txt">MIT </a> and <a href="http://jqueryui.com/latest/GPL-LICENSE.txt">GPL </a> licenses.</div>
+<div>
+	<strong>jQuery UI</strong><br>
+	<a href="http://jqueryui.com"> http://jqueryui.com</a></div>
+<div>
+	<a href="http://jqueryui.com/latest/MIT-LICENSE.txt">MIT </a> and <a href="http://jqueryui.com/latest/GPL-LICENSE.txt">GPL </a> licenses.</div>
+<div>
+	Included files:</div>
+<ul>
+	<li>
+		<div>
+			js/jquery-ui-1.8.14.custom.min.js</div>
+	</li>
+	<li>
+		<div>
+			js/jqueryui.css</div>
+	</li>
+	<li>
+		<div>
+			style/jquery/* (not used, but themeroller included)</div>
+	</li>
+</ul>
+<div>
+	<strong>FullCalendar</strong><br>
+	<a href="http://arshaw.com/fullcalendar/">http://arshaw.com/fullcalendar/</a></div>
+<div>
+	<a href="http://arshaw.com/js/fullcalendar-1.5.1/MIT-LICENSE.txt">MIT</a> or <a href="http://arshaw.com/js/fullcalendar-1.5.1/GPL-LICENSE.txt">GPL</a> Version 2 licenses.</div>
+<div>
+	Included files:</div>
+<ul>
+	<li>
+		<div>
+			js/fullcalendar.js</div>
+	</li>
+	<li>
+		<div>
+			js/gcal.js (for Google Calendar Integration)</div>
+	</li>
+	<li>
+		<div>
+			style/fullcalendar.css</div>
+	</li>
+</ul>
+<div>
+	<strong>Colorbox</strong><br>
+	<a href="http://colorpowered.com/colorbox/"> http://colorpowered.com/colorbox/</a></div>
+<div>
+	<a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a></div>
+<div>
+	Included files:</div>
+<ul>
+	<li>
+		<div>
+			js/jquery.colorbox-min.js</div>
+	</li>
+	<li>
+		<div>
+			style/colorbox.css</div>
+	</li>
+	<li>
+		<div>
+			images/colorbox/*</div>
+	</li>
+</ul>
+<div>
+	<strong>Vanadium</strong><br>
+	<a href="http://www.vanadiumjs.com/"> http://www.vanadiumjs.com/</a></div>
+<div>
+	Included files:</div>
+<ul>
+	<li>
+		<div>
+			js/vanadium-min.js</div>
+	</li>
+</ul>
+<p>
+	<strong>Flot</strong><br>
+	<a href="http://code.google.com/p/flot/"> http://code.google.com/p/flot/</a><br>
+	<a href="http://www.opensource.org/licenses/mit-license.php" rel="nofollow">MIT License</a></p>
+<p>
+	Included files:</p>
+<ul>
+	<li>
+		js/excanvas.min.js (for IE Canvas support)</li>
+	<li>
+		js/jquery.flot.min.js</li>
+	<li>
+		js/jquery.flot.pie.min.js</li>
+	<li>
+		js/jquery.flot.stack.min.js</li>
+</ul>
+<div>
+	<strong>Superfish</strong><br>
+	<a href="http://www.opensource.org/licenses/mit-license.php" rel="nofollow">MIT</a> | <a href="http://jqueryui.com/latest/GPL-LICENSE.txt">GPL</a><br>
+	<a href="http://users.tpg.com.au/j_birch/plugins/superfish/"> http://users.tpg.com.au/j_birch/plugins/superfish/</a></div>
+<ul>
+	<li>
+		<div>
+			js/superfish.js</div>
+	</li>
+	<li>
+		<div>
+			style/superfish.css</div>
+	</li>
+</ul>
+<p>
+	<strong>CLEditor</strong><br>
+	<a href="http://premiumsoftware.net/cleditor/"> http://premiumsoftware.net/cleditor/</a><br>
+	<a href="http://www.opensource.org/licenses/mit-license.php" rel="nofollow">MIT License</a></p>
+<ul>
+	<li>
+		js/jquery.cleditor.min.js</li>
+	<li>
+		style/jquery.cleditor.css</li>
+	<li>
+		images/form/cleditor/*</li>
+</ul>
+<p>
+	<strong>Uploadify</strong><br>
+	<a href="http://www.uploadify.com/">http://www.uploadify.com/</a><br>
+	<a href="http://www.opensource.org/licenses/mit-license.php" rel="nofollow">MIT</a> | <a href="http://jqueryui.com/latest/GPL-LICENSE.txt">GPL</a></p>
+<ul>
+	<li>
+		images/cancel.png</li>
+	<li>
+		js/jquery.uploadify.v2.1.4.min.js</li>
+	<li>
+		js/swfobject.js</li>
+	<li>
+		style/uploadify.css</li>
+	<li>
+		others/uploadify.php</li>
+	<li>
+		others/uploadify.swf</li>
+</ul>
+<p>
+	<strong>Tipsy</strong><br>
+	<a href="http://onehackoranother.com/projects/jquery/tipsy/">http://onehackoranother.com/projects/jquery/tipsy/</a><a href="http://www.opensource.org/licenses/mit-license.php" rel="nofollow"><br>
+	MIT License</a></p>
+<ul>
+	<li>
+		js/jquery.tipsy.js</li>
+</ul>
+<p>
+	<strong>Datatables</strong><br>
+	<a href="http://www.datatables.net/">http://www.datatables.net/</a><br>
+	<a href="http://www.datatables.net/license_gpl2">GPL v2 license</a> | <a href="http://www.datatables.net/license_bsd">BSD (3-point) license</a>.</p>
+<ul>
+	<li>
+		js/jquery.dataTables.min.js</li>
+</ul>
+<p>
+	<strong>iPhone Style Checkbox</strong><br>
+	<a href="http://awardwinningfjords.com/2009/06/16/iphone-style-checkboxes.html">http://awardwinningfjords.com/2009/06/16/iphone-style-checkboxes.html</a><br>
+	<a href="http://www.opensource.org/licenses/mit-license.php" rel="nofollow">MIT</a> | <a href="http://jqueryui.com/latest/GPL-LICENSE.txt">GPL</a></p>
+<ul>
+	<li>
+		js/iphone-style-checkboxes.js</li>
+	<li>
+		style/iphonecheckbox.css</li>
+</ul>
+<p>
+	<strong>jQuery labelify</strong><br>
+	<a href="http://awardwinningfjords.com/2009/06/16/iphone-style-checkboxes.html">http://awardwinningfjords.com/2009/06/16/iphone-style-checkboxes.html</a><br>
+	<a href="http://www.opensource.org/licenses/mit-license.php" rel="nofollow">MIT</a> | <a href="http://jqueryui.com/latest/GPL-LICENSE.txt">GPL</a></p>
+<ul>
+	<li>
+		js/iphone-style-checkboxes.js</li>
+	<li>
+		style/iphonecheckbox.css</li>
+</ul>
+
+<p>
+	<strong>jQuery UI Select Menu</strong><br>
+	<a href="http://www.filamentgroup.com/lab/jquery_ui_selectmenu_an_aria_accessible_plugin_for_styling_a_html_select/">http://www.filamentgroup.com/lab/jquery_ui_selectmenu_an_aria_accessible_plugin_for_styling_a_html_select/</a><br>
+	<a href="http://www.opensource.org/licenses/mit-license.php" rel="nofollow">MIT</a> | <a href="http://jqueryui.com/latest/GPL-LICENSE.txt">GPL</a></p>
+<ul>
+	<li>
+		js/jquery.ui.selectmenu.js</li>
+</ul>
+</section>
+<section id="psd_files">
+	<h3>PSD files</h3><hr class="notop">
+<p>
+	The theme includes two PSD files located in the psd/ folder.</p>
+<ul>
+	<li>
+		<strong>Chameleon Circuit.psd</strong> includes all the main layout of the theme</li>
+	<li>
+		<strong>Menu Icons.psd</strong> includes a customized version of <a href="http://iconsweets2.com/">IconSweets2</a> iconset that you can crop from to get your choice of menu icons.</li>
+</ul>
+</section>
+
+	</div>
+</body>
+</html>
